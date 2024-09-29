@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profil Pribadi</title>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+            }
+            table {
+                width: 10%;
+                margin-bottom: 20px;
+            }
+            td {
+                padding: 0px;
+            }
+            h1, h2, h3 {
+                margin-bottom: 5px;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 0px;
+                margin-bottom: 10px;
+            }
+            img {
+                width: 160px;
+                height: 160px;
+            }
+            video {
+                width: 300px;
+                height: 200px;
+            }
+            a {
+                color: blue;
+                margin-right: 10px;
+            }
+            .contact-form {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                max-width: 600%;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+            contact-form label {
+                padding-right: 10px;
+                font-weight: bold;
+            }
+            .contact-form input, .contact-form textarea {
+                padding: 3px;
+                border: 1px solid #ccc;
+                width: 40%;
+                height: 60%;
+            }
+    
+            .contact-form textarea {
+                grid-column: span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Profil Pribadi</h1> <!-- profile title -->
+
+        <table> <!--digunakan untuk menampilkan data yang membutuhkan tabel-->
+            <tr> <!--pendefinisian baris-->
+                <td> <!--pendefinisian kolom-->
+                    <h3 style="text-align: center;">Foto Profil</h3>
+                    <img src="sapnap dc pfp.jpg" alt="Foto Profil"> <!--menampilkan gambar pada halaman web-->
+                </td>
+                <td>
+                    <h3 style="text-align: center;">Video Perkenalan</h3>
+                    <video controls> <!--menampilkan video pada halaman web-->
+                        <source src="aceu.mp4" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Tentang Saya</h2>
+        <p>Halo! Saya adalah seorang pengembang web antusias dengan passion di bidang teknologi dan desain kreatif.</p>
+
+        <h2>Keterampilan</h2>
+        <table border="0">
+            <tr>
+                <th>Keterampilan</th>
+                <th>Tingkat</th>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td>Mahir</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Menengah</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Pemula</td>
+            </tr>
+        </table>
+
+        <h2>Hubungi Saya</h2>
+        <form action="submit_form.php" method="post"> <!--digunakan sebagai wadah untuk menampung dan mengumpulkan data2 dari pengguna untuk database-->
+            <div class="contact-form"> <!--menggunakan tag div untuk lebih mudah mengelompokkan element yang terkait-->
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required> <!--label input digunakan untuk menginput sesuatu berdasarkan tipe nya apa-->
+            </div>
+
+            <div class="contact-form">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="contact-form">
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Kirim Pesan</button> <!--untuk menampilkan button yang bisa ditekan-->
+        </form>
+        <h2>Media Sosial</h2>
+
+        <a href="https://linkedin.com/in/agatha-evelyn-e130104" target="_blank">LinkedIn</a> <!--digunakan untuk menyisipkan hyperlink untuk berpindah laman menuju web lain-->
+        <span>|</span>
+        <a href="https://github.com/pupperplane" target="_blank">Github</a>
+        <span>|</span>
+        <a href="https://x.com/ashravenz" target="_blank">Twitter</a>
+    </body>
+</html>
